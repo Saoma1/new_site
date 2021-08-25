@@ -96,3 +96,12 @@ a {
   justify-content: space-between;
   margin: 0.5rem;
 }
+
+.copyright {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  margin: 0.5rem;
+}
