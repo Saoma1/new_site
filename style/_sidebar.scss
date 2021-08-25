@@ -1,0 +1,44 @@
+.sidebar {
+  position: fixed;
+  bottom: 2rem;
+  display: flex;
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  svg {
+    margin: 0.5rem;
+    width: 2rem;
+    stroke: var(--sidebar-color);
+    fill: var(--sidebar-color);
+  }
+}
+
+.line {
+  width: 0px;
+  height: 100px;
+  border: 1px solid var(--heading-color);
+  margin: 3px;
+  display: inline-block;
+}
+
+@media (max-width: 780px) {
+  .sidebar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    .icons {
+      margin: 0 auto;
+      flex-direction: row;
+    }
+  }
+  .line {
+    border: none;
+    height: 0px;
+  }
+}
