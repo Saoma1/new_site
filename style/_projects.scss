@@ -1,0 +1,24 @@
+.projects {
+  width: 100%;
+  // padding: 0px 10rem;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 15px;
+  color: white;
+}
+
+.project {
+  // background-size: 100%;
+  // background-size: contain;
+  height: calc(35vh - 10px);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  // height: 18rem;
+  // width: 29rem;
+}

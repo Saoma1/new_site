@@ -1,0 +1,92 @@
+@import "theme";
+@import "canvas";
+@import "about";
+@import "projects";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #302ae6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  color: var(--heading-color);
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  max-width: 400px;
+}
+.tright {
+  color: var(--heading-color);
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.tright::before {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--heading-color);
+}
+
+.title::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--heading-color);
+}
+
+.tright:not(:empty)::before {
+  margin-right: 1em;
+}
+.title:not(:empty)::after {
+  margin-left: 1em;
+}
+
+.container {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}

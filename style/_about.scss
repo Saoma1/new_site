@@ -1,0 +1,18 @@
+#bio {
+  display: flex;
+  justify-content: space-between;
+}
+
+#bio-description {
+  width: 70%;
+}
+
+#profile {
+  object-fit: contain;
+}
+
+.skills {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
