@@ -11,7 +11,8 @@
 .project {
   // background-size: 100%;
   // background-size: contain;
-  height: calc(35vh - 10px);
+  // height: calc(35vh - 10px);
+  // height: 200px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -19,6 +20,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--bg-color);
-  // height: 18rem;
+  height: 10rem;
   // width: 29rem;
 }

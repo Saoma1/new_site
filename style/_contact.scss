@@ -1,0 +1,29 @@
+#contact {
+  position: relative;
+
+  svg {
+    margin-left: 1rem;
+    width: 3.5rem;
+    stroke: var(--sidebar-color);
+    fill: var(--sidebar-color);
+  }
+}
+table {
+  margin: 0 auto;
+  border-spacing: 1rem;
+}
+
+#contact_icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.contact_icon {
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // margin: 1rem;
+}

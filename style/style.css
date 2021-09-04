@@ -181,11 +181,11 @@ input:checked + .slider:before {
 }
 
 .project {
-  height: calc(35vh - 10px);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--bg-color);
+  height: 10rem;
 }
 
 .sidebar {
@@ -243,6 +243,31 @@ input:checked + .slider:before {
     border: none;
     height: 0px;
   }
+}
+
+#contact {
+  position: relative;
+}
+
+#contact svg {
+  margin-left: 1rem;
+  width: 3.5rem;
+  stroke: var(--sidebar-color);
+  fill: var(--sidebar-color);
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 1rem;
+}
+
+#contact_icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 * {
