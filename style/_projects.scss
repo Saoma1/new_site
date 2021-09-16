@@ -1,25 +1,94 @@
 .projects {
-  width: 100%;
-  // padding: 0px 10rem;
-  display: inline-grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 20px;
-  column-gap: 15px;
-  color: white;
-}
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  column-gap: 3rem;
 
-.project {
-  // background-size: 100%;
-  // background-size: contain;
-  // height: calc(35vh - 10px);
-  // height: 200px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--bg-color);
-  height: 10rem;
-  // width: 29rem;
+  // border: 1px solid #000;
+
+  .project {
+    position: relative;
+    justify-self: center;
+    transition: 0.4s ease-out;
+    border-radius: 15px;
+    height: 60%;
+
+    &:hover {
+      transform: translateY(20px);
+      &:before {
+        opacity: 1;
+      }
+      .info {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 2;
+      transition: 0.4s;
+      opacity: 0;
+    }
+  }
+
+  img {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .info {
+    position: relative;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+    top: -85%;
+    left: 20%;
+    transform: translateX(-50%);
+    transform: translateY(30px);
+    transition: 0.5s;
+    h1 {
+      color: #c41b6d;
+      font-weight: bold;
+      margin: 0px;
+    }
+    p {
+      letter-spacing: 1px;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+    button {
+      padding: 0.6rem;
+      outline: none;
+      border: none;
+      border-radius: 3px;
+      background: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.4s ease;
+      &:hover {
+        background: dodgerblue;
+        color: white;
+      }
+    }
+  }
+  svg {
+    margin: 0.5rem;
+    width: 2rem;
+    stroke: white;
+    transition: 0.3s ease;
+    &:hover {
+      stroke: red;
+    }
+  }
 }

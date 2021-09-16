@@ -22,6 +22,9 @@
 
 // tag_name "profile"
 // const mainUrl = `https://api.github.com/repos/Saoma1/tip-calculator-app-main/releases`;
+require("dotenv").config();
+
+onsole.log(process.env.API_KEY);
 
 const container = document.getElementById("github_projects");
 const repos = [];

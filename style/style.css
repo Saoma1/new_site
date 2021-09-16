@@ -169,23 +169,117 @@ input:checked + .slider:before {
 }
 
 .projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
+}
+
+.projects .project {
+  position: relative;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  border-radius: 15px;
+  height: 60%;
+}
+
+.projects .project:hover {
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+}
+
+.projects .project:hover:before {
+  opacity: 1;
+}
+
+.projects .project:hover .info {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.projects .project:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
   width: 100%;
-  display: -ms-inline-grid;
-  display: inline-grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 20px;
-  -webkit-column-gap: 15px;
-          column-gap: 15px;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: 0;
+}
+
+.projects img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+
+.projects .info {
+  position: relative;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+  top: -85%;
+  left: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.projects .info h1 {
+  color: #c41b6d;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.projects .info p {
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.projects .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.projects .info button:hover {
+  background: dodgerblue;
   color: white;
 }
 
-.project {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--bg-color);
-  height: 10rem;
+.projects svg {
+  margin: 0.5rem;
+  width: 2rem;
+  stroke: white;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.projects svg:hover {
+  stroke: red;
 }
 
 .sidebar {
